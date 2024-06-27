@@ -220,6 +220,46 @@ $query = "SELECT COUNT(*) AS total FROM admin_baiviet WHERE id_benh = ' $id_benh
       return null;
     }
   }
+  public function getAllDanhSachBaiVietNew($khoa)
+  {
+    $query = "SELECT baiviet.*, 
+    benh.slug AS slug_benh, 
+    benh.id AS id_benh, 
+    benh.id_khoa AS id_benh_khoa, 
+    khoa.slug AS slug_khoa 
+    FROM admin_baiviet baiviet 
+    JOIN admin_benh benh ON baiviet.id_benh = benh.id
+    JOIN admin_khoa khoa ON benh.id_khoa = khoa.id
+     WHERE khoa.slug = '$khoa'
+    ORDER BY baiviet.id DESC LIMIT 5";
+
+    $result = $this->db->select($query);
+    if ($result && $result->num_rows > 0) {
+      $baivietArr = [];
+      while ($row = $result->fetch_assoc()) {
+        // Lấy id_khoa từ bảng admin_benh
+        $id_benh_khoa = $row['id_benh_khoa'];
+
+
+        $query_khoa = "SELECT * FROM admin_khoa WHERE id = $id_benh_khoa";
+        $result_khoa = $this->db->select($query_khoa);
+
+        if ($result_khoa && $result_khoa->num_rows > 0) {
+          $khoa_info = $result_khoa->fetch_assoc();
+          // Thêm thông tin từ bảng admin_khoa vào mảng baivietArr
+          $row['name'] = $khoa_info['name'];
+          $row['slug_khoa'] = $khoa_info['slug'];
+        }
+
+        // Thêm bài viết vào mảng kết quả
+        $baivietArr[] = $row;
+      }
+
+      return $baivietArr;
+    } else {
+      return [];
+    }
+  }
 
   public function getDanhSachBaiVietNew()
   {

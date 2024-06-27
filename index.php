@@ -2,6 +2,7 @@
 include 'inc/header.php';
 
 $danhSachBaiViet = $bai_viet->getDanhSachBaiVietNew();
+$danhSachBaiVietTheoKhoa = $bai_viet->getAllDanhSachBaiVietNew('benh-xa-hoi');
 $tin_tuc_all_news = $tin_tuc->getAllLimitTinTuc();
 ?>
 
@@ -314,9 +315,9 @@ $dataFake = array(
             </div>
             <hr style="width: 100%;" class="feedback_hr">
             <?php
-            if ($danhSachBaiViet) {
-                for ($i = 0; $i < count($danhSachBaiViet); $i++) {
-                    $result = $danhSachBaiViet[$i];
+            if ($danhSachBaiVietTheoKhoa) {
+                for ($i = 0; $i < count($danhSachBaiVietTheoKhoa); $i++) {
+                    $result = $danhSachBaiVietTheoKhoa[$i];
                     $text = $result['descriptions'];
                     $tieu_de = $result['tieu_de'];
             ?>
