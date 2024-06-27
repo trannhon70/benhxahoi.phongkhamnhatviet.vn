@@ -52,7 +52,7 @@
                         <img style="padding-left: 77px; margin-bottom: 7px; " src="<?php echo $local ?>/images/icons/icon_down.png" alt="">
                     </span>
                     <ul class="sidebar_mobile_li_ul">
-                        <li class="sidebar_mobile_li_ul_li  ">
+                        <!-- <li class="sidebar_mobile_li_ul_li  ">
                             <span onclick="showShelectOptionBenh(); return true;" style="display: flex; align-items: center; justify-content: space-between; ">
                                 <span>Nam khoa</span>
                                 <img style=" margin-bottom: 9px; padding-top: 9px; width: 10px; " src="<?php echo $local ?>/images/icons/add.webp" alt="">
@@ -67,8 +67,8 @@
                                 <?php endforeach; ?>
 
                             </ul>
-                        </li>
-                        <!-- <li class="sidebar_mobile_li_ul_li  ">
+                        </li> -->
+                         <!-- <li class="sidebar_mobile_li_ul_li  ">
                             <span onclick="showShelectOptionBenh();return true;" style="display: flex; align-items: center; justify-content: space-between; ">
                                 <span>da liễu</span>
                                 <img style=" margin-bottom: 9px; padding-top: 9px; width: 10px; " src="<?php echo $local ?>/images/icons/add.webp" alt="">
@@ -83,7 +83,7 @@
                                 <?php endforeach; ?>
 
                             </ul>
-                        </li>
+                        </li> -->
                         <li class="sidebar_mobile_li_ul_li  ">
                             <span onclick="showShelectOptionBenh();return true;" style="display: flex; align-items: center; justify-content: space-between; ">
                                 <span>bệnh xã hội</span>
@@ -100,7 +100,7 @@
 
                             </ul>
                         </li>
-                        <li class="sidebar_mobile_li_ul_li  ">
+                       <!-- <li class="sidebar_mobile_li_ul_li  ">
                             <span onclick="showShelectOptionBenh();return true;" style="display: flex; align-items: center; justify-content: space-between; ">
                                 <span>hậu môn - trực tràng </span>
                                 <img style=" margin-bottom: 9px; padding-top: 9px; width: 10px; " src="<?php echo $local ?>/images/icons/add.webp" alt="">

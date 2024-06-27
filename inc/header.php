@@ -33,8 +33,8 @@ header("Pragma: no-cache");
 header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
 header("Cache-Control: max-age=2592000");
 
-$local = '/benhxahoi.phongkhamdakhoanhatviet.vn';
-// $local ='https://benhxahoi.phongkhamdakhoanhatviet.vn'
+// $local = '/benhxahoi.phongkhamdakhoanhatviet.vn';
+$local ='https://benhxahoi.phongkhamdakhoanhatviet.vn'
 
 
 ?>
@@ -288,12 +288,12 @@ $sessionkhoa = Session::get('khoa');
                 <div class="header_bottom_gt"> <a class="header_bottom_gt_a" target="_blank" href="https://benhxahoi.phongkhamdakhoanhatviet.vn/phong-kham-da-nhat-viet-phong-kham-da-khoa-uy-tin-tphcm-7.html">Giới thiệu</a></div>
                 <div class="header_bottom_dm">
 
-                    <a class="header_bottom_gt_a" href="#">bệnh nam khoa</a>
+                    <a class="header_bottom_gt_a" href="#">bệnh xã hội</a>
                     <div class="dropdown_menu">
                         <div style="height: 10px;"></div>
                         <div class="dropdown_menu_body">
-                            <ul class="dropdown_menu_body_ul">
-                                <!-- <h5 class="dropdown_menu_body_ul_li_h5">Nam khoa</h5> -->
+                            <!-- <ul class="dropdown_menu_body_ul">
+                                <h5 class="dropdown_menu_body_ul_li_h5">Nam khoa</h5>
                                 <?php foreach ($MenuNamkhoa as $value) :
                                     $activeClass = ($value['id'] === $sessionBenh) ? 'active_menu_tab' : ''; ?>
 
@@ -303,20 +303,20 @@ $sessionkhoa = Session::get('khoa');
 
                                     </li>
                                 <?php endforeach; ?>
-                            </ul>
-                            <!-- <ul class="dropdown_menu_body_ul">
+                            </ul> -->
+                        <!-- <ul class="dropdown_menu_body_ul">
                                 <h5 class="dropdown_menu_body_ul_li_h5">da liễu</h5>
                                 <?php foreach ($MenuDaLieu as $value) : $activeClass = ($value['id'] === $sessionBenh) ? 'active_menu_tab' : ''; ?>
                                     <li onclick="saveLinkToSession('<?php echo $value['session']; ?>'); return true;" class="dropdown_menu_body_ul_li <?php echo $activeClass; ?>"><a class="dropdown_menu_body_ul_li_a" href="<?php echo $local . $value['link'] ?>"><?php echo $value['title'] ?> </a></li>
                                 <?php endforeach; ?>
-                            </ul>
+                            </ul> -->
                             <ul class="dropdown_menu_body_ul">
-                                <h5 class="dropdown_menu_body_ul_li_h5">bệnh xã hội</h5>
+                                <!-- <h5 class="dropdown_menu_body_ul_li_h5">bệnh xã hội</h5> -->
                                 <?php foreach ($MenuBXH as $value) : $activeClass = ($value['id'] === $sessionBenh) ? 'active_menu_tab' : ''; ?>
                                     <li onclick="saveLinkToSession('<?php echo $value['session']; ?>'); return true;" class="dropdown_menu_body_ul_li <?php echo $activeClass; ?>"><a class="dropdown_menu_body_ul_li_a" href="<?php echo $local . $value['link'] ?>"><?php echo $value['title'] ?> </a></li>
                                 <?php endforeach; ?>
                             </ul>
-                            <ul class="dropdown_menu_body_ul">
+                                <!-- <ul class="dropdown_menu_body_ul">
                                 <h5 class="dropdown_menu_body_ul_li_h5">hậu môn - trực tràng</h5>
                                 <?php foreach ($MenuHM as $value) : $activeClass = ($value['id'] === $sessionBenh) ? 'active_menu_tab' : ''; ?>
                                     <li onclick="saveLinkToSession('<?php echo $value['session']; ?>'); return true;" class="dropdown_menu_body_ul_li <?php echo $activeClass; ?>"><a class="dropdown_menu_body_ul_li_a" href="<?php echo $local . $value['link'] ?>"><?php echo $value['title'] ?></a></li>
