@@ -10,8 +10,8 @@ if (isset($_GET['action']) && $_GET['action'] == 'logout') {
     Session::destroy();
 }
 
-// $local = 'http://localhost/benhxahoi.phongkhamdakhoanhatviet.vn';
-$local = 'https://benhxahoi.phongkhamdakhoanhatviet.vn/';
+$local = 'http://localhost/benhxahoi.phongkhamdakhoanhatviet.vn';
+// $local = 'https://benhxahoi.phongkhamdakhoanhatviet.vn/';
 ?>
 
 <?php
