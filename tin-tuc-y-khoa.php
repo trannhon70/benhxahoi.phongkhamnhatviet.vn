@@ -303,7 +303,7 @@ if (isset($path_parts[0]) && $path_parts[0] !== 'tin-tuc-y-khoa') {
             </a>
         </div>
         <div class="health_row_col col-sm-8">
-            <?php if (Session::get('role') === 'admin') {
+            <?php if (Session::get('role') === '1') {
 
             ?>
                 <a class="chinh-sua" href="<?php echo $local ?>/admin/tin-tuc-edit.php?edit=<?php echo $getByIdTT['id'] ?>"><i style="font-size: 19px;" class='bx bxs-pencil'></i> chỉnh sửa</a>
@@ -354,7 +354,7 @@ if (isset($path_parts[0]) && $path_parts[0] !== 'tin-tuc-y-khoa') {
         } ?>
     </div>
     <div class="health_row_col mt-2 ">
-        <?php if (Session::get('role') === 'admin') {
+        <?php if (Session::get('role') === '1') {
 
         ?>
             <a style="margin-left: 10px;" class="chinh-sua" href="<?php echo $local ?>/admin/tin-tuc-edit.php?edit=<?php echo $getByIdTT['id'] ?>"><i style="font-size: 19px;" class='bx bxs-pencil'></i> chỉnh sửa</a>
