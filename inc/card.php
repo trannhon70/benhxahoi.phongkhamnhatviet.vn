@@ -10,10 +10,10 @@ $page = Session::get('page') ? Session::get('page') : 1;
 $offset = ($page - 1) * $limit;
 
 // Lấy danh sách bài viết theo phân trang
-$list_BV_pagination = $bai_viet->getById_benh($benh, $limit, $offset);
+$list_BV_pagination = $bai_viet->getById_benh($sessionBenh, $limit, $offset);
 
 // Lấy tổng số bài viết
-$total_articles = $bai_viet->getTotalCountById($benh);
+$total_articles = $bai_viet->getTotalCountById($sessionBenh);
 // Tính toán tổng số trang
 $total_pages = ceil($total_articles / $limit);
 ?>
@@ -47,8 +47,8 @@ $total_pages = ceil($total_articles / $limit);
             }
         } elseif ($sessionkhoa === 'benh-xa-hoi') {
             foreach ($MenuBXH as $item) {
-                if ($item['id'] === $sessionBenh) {
-                    echo $item['title'];
+                if ($item['slug'] === $sessionBenh) {
+                    echo $item['name'];
                     break;
                 }
             }

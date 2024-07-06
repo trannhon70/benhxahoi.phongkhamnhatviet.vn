@@ -3,8 +3,8 @@ include 'inc/header.php';
 
 
 // Lấy URL hiện tại
-// $current_url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-$current_url = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+$current_url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+// $current_url = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
 $url_parts = parse_url($current_url);
 
@@ -19,20 +19,20 @@ if (isset($path_parts[1])) {
     $id_page = 1;
 }
 
-// if (isset($path_parts[2])) {
-//     $file_slug = $path_parts[2];
-//     $id_slug = explode('.', basename($file_slug))[0];
-
-//     $get_post_detail = $bai_viet->getBaiViet_bySlug($id_slug);
-
-// }
-
-if(isset($path_parts[1])){
-     $file_slug = $path_parts[1];   
-
+if (isset($path_parts[2])) {
+    $file_slug = $path_parts[2];
     $id_slug = explode('.', basename($file_slug))[0];
+
     $get_post_detail = $bai_viet->getBaiViet_bySlug($id_slug);
+
 }
+
+// if(isset($path_parts[1])){
+//      $file_slug = $path_parts[1];   
+
+//     $id_slug = explode('.', basename($file_slug))[0];
+//     $get_post_detail = $bai_viet->getBaiViet_bySlug($id_slug);
+// }
 
 ?>
 <style>
@@ -259,9 +259,9 @@ if(isset($path_parts[1])){
                 }
             } elseif ($sessionkhoa == 'benh-xa-hoi') {
                 foreach ($MenuBXH as $item) {
-                    $activeClass = $item['id'] === $sessionBenh ? 'active_menu_tab' : '';
-                    echo '<a onclick="saveBenhToSession(\'' . $item['id'] . '\'); return true;" href="' . $local . $item['link'] . '">';
-                    echo '<div class="health_row_col_div ' . $activeClass . '">' . $item['title'] . '</div>';
+                    $activeClass = $item['slug'] === $sessionBenh ? 'active_menu_tab' : '';
+                    echo '<a onclick="saveBenhToSession(\'' . $item['slug'] . '\'); return true;" href="' . $local . $item['link'] . '">';
+                    echo '<div class="health_row_col_div ' . $activeClass . '">' . $item['name'] . '</div>';
                     echo '</a>';
                 }
             } elseif ($sessionkhoa == 'hau-mon-truc-trang') {
