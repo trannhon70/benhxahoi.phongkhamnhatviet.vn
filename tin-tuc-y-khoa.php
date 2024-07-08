@@ -4,8 +4,8 @@ $getAllLimit = $tin_tuc->getAllLimitTinTuc();
 $getOneLimit = $tin_tuc->getOneLimitTinTuc();
 
 // Lấy URL hiện tại
-// $current_url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-$current_url = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+$current_url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+// $current_url = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
 
 $url_parts = parse_url($current_url);
@@ -14,23 +14,23 @@ $path = $url_parts['path'];
 
 $path_parts = explode('/', trim($path, '/'));
 
-// if (isset($path_parts[1]) && $path_parts[1] !== 'tin-tuc-y-khoa') {
-//     $file_name = $path_parts[1];
-//     $slugTinTuc = explode('.', basename($file_name))[0];
-//     // Kiểm tra nếu $file_name không phải là 'tin-tuc-y-khoa.html'
-//     if ($file_name !== 'tin-tuc-y-khoa.html') {
-//         $getByIdTT = $tin_tuc->getByslug_tintuc($slugTinTuc);
-//     }
-// }
-
-if (isset($path_parts[0]) && $path_parts[0] !== 'tin-tuc-y-khoa') {
-    $file_name = $path_parts[0];
+if (isset($path_parts[1]) && $path_parts[1] !== 'tin-tuc-y-khoa') {
+    $file_name = $path_parts[1];
     $slugTinTuc = explode('.', basename($file_name))[0];
     // Kiểm tra nếu $file_name không phải là 'tin-tuc-y-khoa.html'
     if ($file_name !== 'tin-tuc-y-khoa.html') {
         $getByIdTT = $tin_tuc->getByslug_tintuc($slugTinTuc);
     }
 }
+
+// if (isset($path_parts[0]) && $path_parts[0] !== 'tin-tuc-y-khoa') {
+//     $file_name = $path_parts[0];
+//     $slugTinTuc = explode('.', basename($file_name))[0];
+//     // Kiểm tra nếu $file_name không phải là 'tin-tuc-y-khoa.html'
+//     if ($file_name !== 'tin-tuc-y-khoa.html') {
+//         $getByIdTT = $tin_tuc->getByslug_tintuc($slugTinTuc);
+//     }
+// }
 
 ?>
 
@@ -303,10 +303,10 @@ if (isset($path_parts[0]) && $path_parts[0] !== 'tin-tuc-y-khoa') {
             </a>
         </div>
         <div class="health_row_col col-sm-8">
-            <?php if (Session::get('role') === '1') {
+            <?php if (Session::get('role') === '1' || Session::get('role') === '2' ) {
 
             ?>
-                <a class="chinh-sua" href="<?php echo $local ?>/admin/tin-tuc-edit.php?edit=<?php echo $getByIdTT['id'] ?>"><i style="font-size: 19px;" class='bx bxs-pencil'></i> chỉnh sửa</a>
+                <a class="chinh-sua" href="<?php echo $local ?>/admin/tin-tuc-edit.php?edit=<?php echo isset($getByIdTT['id']) ? $getByIdTT['id'] : $getOneLimit['id'] ?>"><i style="font-size: 19px;" class='bx bxs-pencil'></i> chỉnh sửa</a>
             <?php } ?>
             <?php if (isset($getByIdTT)) { ?>
                 <h1 class="health_row_col_title_tin_tuc">
@@ -354,10 +354,10 @@ if (isset($path_parts[0]) && $path_parts[0] !== 'tin-tuc-y-khoa') {
         } ?>
     </div>
     <div class="health_row_col mt-2 ">
-        <?php if (Session::get('role') === '1') {
+        <?php if (Session::get('role') === '1' || Session::get('role') === '2' ) {
 
         ?>
-            <a style="margin-left: 10px;" class="chinh-sua" href="<?php echo $local ?>/admin/tin-tuc-edit.php?edit=<?php echo $getByIdTT['id'] ?>"><i style="font-size: 19px;" class='bx bxs-pencil'></i> chỉnh sửa</a>
+            <a style="margin-left: 10px;" class="chinh-sua" href="<?php echo $local ?>/admin/tin-tuc-edit.php?edit=<?php echo isset($getByIdTT['id']) ? $getByIdTT['id'] : $getOneLimit['id'] ?>"><i style="font-size: 19px;" class='bx bxs-pencil'></i> chỉnh sửa</a>
         <?php } ?>
         <?php if (isset($getByIdTT)) { ?>
             <h1 class="health_row_col_title_tin_tuc">
