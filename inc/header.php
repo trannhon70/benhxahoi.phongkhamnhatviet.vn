@@ -281,9 +281,9 @@ $sessionkhoa = Session::get('khoa');
                 </div>
             </div>
         </div>
-        <div style="background-color: #166B85;">
+        <div style="background-color: #209dc3;">
 
-            <div style="background-color: #166B85;" class="container header_bottom">
+            <div style="background-color: #209dc3;" class="container header_bottom">
                 <a href="<?php echo $local ?>/index.html" class="header_bottom_icon">
                     <img height="auto" width="35px" src="<?php echo $local ?>/images/icons/icon_home.webp" alt="...">
                 </a>
