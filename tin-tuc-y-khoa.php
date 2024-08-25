@@ -230,7 +230,7 @@ if (isset($path_parts[1]) && $path_parts[1] !== 'tin-tuc-y-khoa') {
         color: white;
         font-size: 23px;
         font-weight: 700;
-        text-transform: uppercase;
+        text-transform: capitalize;
         background-color: #008DBA;
         padding: 10px 15px;
     }
@@ -468,12 +468,12 @@ if (isset($path_parts[1]) && $path_parts[1] !== 'tin-tuc-y-khoa') {
         for (let i = 0; i < h2Elements?.length; i++) {
             h2Elements[i].style.color = '#0060A7';
             h2Elements[i].style.fontWeight = '700';
-            h2Elements[i].style.fontSize = '25px';
+            h2Elements[i].style.fontSize = '23px';
             h2Elements[i].style.textTransform = 'capitalize';
             // h2Elements[i].style.marginLeft = '10px';
             h2Elements[i].style.background = 'url("<?php echo $local ?>/images/icons/icon_cong.webp") no-repeat left center';
-            h2Elements[i].style.backgroundSize = '30px 30px';
-            h2Elements[i].style.paddingLeft = '35px';
+            h2Elements[i].style.backgroundSize = '23px 23px';
+            h2Elements[i].style.paddingLeft = '25px';
 
         }
 
@@ -486,8 +486,8 @@ if (isset($path_parts[1]) && $path_parts[1] !== 'tin-tuc-y-khoa') {
             h3Element[i].style.textTransform = 'capitalize';
             // h3Element[i].style.marginLeft = '10px';
             h3Element[i].style.background = 'url("<?php echo $local ?>/images/icons/icon_mui.gif") no-repeat left center';
-            h3Element[i].style.backgroundSize = '23px 23px';
-            h3Element[i].style.paddingLeft = '35px';
+            h3Element[i].style.backgroundSize = '21px 21px';
+            h3Element[i].style.paddingLeft = '25px';
         }
     }
 </script>
