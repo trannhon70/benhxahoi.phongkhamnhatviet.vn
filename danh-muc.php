@@ -3,8 +3,8 @@ include 'inc/header.php';
 
 
 // Lấy URL hiện tại
-$current_url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-// $current_url = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+// $current_url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+$current_url = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
 $url_parts = parse_url($current_url);
 
@@ -20,20 +20,20 @@ if (isset($path_parts[1])) {
     $id_page = 1;
 }
 
-if (isset($path_parts[2])) {
-    $file_slug = $path_parts[2];
-    $id_slug = explode('.', basename($file_slug))[0];
-
-    $get_post_detail = $bai_viet->getBaiViet_bySlug($id_slug);
-
-}
-
-// if(isset($path_parts[1])){
-//      $file_slug = $path_parts[1];   
-
+// if (isset($path_parts[2])) {
+//     $file_slug = $path_parts[2];
 //     $id_slug = explode('.', basename($file_slug))[0];
+
 //     $get_post_detail = $bai_viet->getBaiViet_bySlug($id_slug);
+
 // }
+
+if(isset($path_parts[1])){
+     $file_slug = $path_parts[1];   
+
+    $id_slug = explode('.', basename($file_slug))[0];
+    $get_post_detail = $bai_viet->getBaiViet_bySlug($id_slug);
+}
 
 ?>
 <style>

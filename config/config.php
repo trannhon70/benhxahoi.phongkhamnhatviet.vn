@@ -1,12 +1,12 @@
 <?php
-define("DB_HOST", "localhost");
-define("DB_USER", "root");
-define("DB_PASS", "");
-define("DB_NAME", "phongkhamdakhoanhatviet.vn");
-
-
 // define("DB_HOST", "localhost");
-// define("DB_USER", "benh_xahoi_root");
-// define("DB_PASS", "Ie@giB4+inp8oH^A");
-// define("DB_NAME", "benh_xh_phongkhamdakhoanhatviet");   
+// define("DB_USER", "root");
+// define("DB_PASS", "");
+// define("DB_NAME", "phongkhamdakhoanhatviet.vn");
+
+
+define("DB_HOST", "localhost");
+define("DB_USER", "bxh_phongkhamnha");
+define("DB_PASS", "n49EEWCie474Yn4t");
+define("DB_NAME", "bxh_phongkhamnha");   
 ?>

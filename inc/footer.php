@@ -146,12 +146,12 @@
 </section>
  <div class="footer_list_icon">
                 <div>
-                    <a class="footer_icon_happy" href="https://benhxahoi.phongkhamdakhoanhatviet.vn/">
+                    <a class="footer_icon_happy" href="https://benhxahoi.phongkhamnhatviet.vn/">
                         <img width="50px" src="<?php echo $local ?>/images/logo_mobile/icon_happy.gif" alt="">
                     </a>
                 </div>
                 <div class="mt-4">
-                    <a class="footer_icon_zalo" href="https://benhxahoi.phongkhamdakhoanhatviet.vn/">
+                    <a class="footer_icon_zalo" href="https://benhxahoi.phongkhamnhatviet.vn/">
                         <img width="50px" src="<?php echo $local ?>/images/logo_mobile/icon_zalo.png" alt="">
                         <div class="ping_zalo" >
 
@@ -159,7 +159,7 @@
                     </a>
                 </div>
                 <div class="mt-4" > 
-                    <a class="footer_icon_mess " href="https://benhxahoi.phongkhamdakhoanhatviet.vn/">
+                    <a class="footer_icon_mess " href="https://benhxahoi.phongkhamnhatviet.vn/">
                         <img width="45px" style="margin-left: 3px;" src="<?php echo $local ?>/images/logo_mobile/icon_message.webp" alt="">
                         <div class="ping" >
 
