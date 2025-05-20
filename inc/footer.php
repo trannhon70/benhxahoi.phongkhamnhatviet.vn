@@ -47,7 +47,7 @@
                  </div>
              </div>
              <div class="footer__contact-left-card">
-                 <amp-img class="footer__contact-left-card-img" src="<?php echo $local ?>/images/icons/icon_location.webp" height="34px" width="36px" alt="..."></amp-img>
+                 <amp-img class="footer__contact-left-card-img" src="<?php echo $local ?>/images/icons/icon_location_no.webp" height="34px" width="36px" alt="..."></amp-img>
                  <div class="footer__contact-left-card-div">
                      <h5>ĐỊA CHỈ</h5>
                      <span>73 Kinh Dương Vương, P.12, Q.6, TP.HCM</span>

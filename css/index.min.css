@@ -10,7 +10,7 @@
     /* color */
     --color-white: white;
     --color-black: black;
-    --color-01969A: #01969A;
+    --color-01969A: #166B85;
     --color-00D8D8: #00D8D8;
     --color-50e2e7: #50e2e7;
     --color-067579: #067579;
@@ -22,12 +22,12 @@
     /* background */
     --background-color-white: white;
     --background-color-F2F2F2: #f2f2f2;
-    --background-color-01969A: #01969A;
-    --background-color-00D8D8: #00D8D8;
+    --background-color-01969A: #166B85;
+    --background-color-00D8D8: #1c8585;
     --background-color-067579: #067579;
     --background-color-23dee448: #23dee448;
     --background-color-50e2e7: #50e2e7;
-    --background-color-008083: #008083;
+    --background-color-008083: #166B85;
    
     /* font size */
     --font-size-10: 10px;
