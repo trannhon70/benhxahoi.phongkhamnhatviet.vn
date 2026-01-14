@@ -40,6 +40,7 @@
                     </div>
                     <h5 class="">
                         73 Kinh Dương Vương, Phường Phú Lâm, TP.HCM
+                        (Đc cũ: 73 Kinh Dương Vương, Phường 12, Quận 6)
                     </h5>
                 </div>
             </div>
