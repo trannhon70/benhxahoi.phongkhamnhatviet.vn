@@ -1,4 +1,3 @@
-
 <?php
 include '../lib/session.php';
 Session::checkSession();
@@ -10,11 +9,12 @@ if (isset($_GET['action']) && $_GET['action'] == 'logout') {
     Session::destroy();
 }
 
-// $local = 'http://localhost/benhxahoi.phongkhamnhatviet.vn';
-$local = 'https://benhxahoi.phongkhamnhatviet.vn';
+$local = 'http://localhost/benhxahoi.phongkhamnhatviet.vn';
+// $local = 'https://benhxahoi.phongkhamnhatviet.vn';
 ?>
 <?php
-function getImagesFromFolder($folderPath) {
+function getImagesFromFolder($folderPath)
+{
     $images = [];
     $allowedExtensions = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
     // Mở thư mục
@@ -73,6 +73,7 @@ header("Cache-Control: max-age=2592000");
     body {
         overflow: hidden;
     }
+
     .btn-icon {
         font-size: 25px;
         cursor: pointer;
@@ -95,37 +96,37 @@ header("Cache-Control: max-age=2592000");
                 </div>
             </div>
             <ul class="sidebar-nav">
-            <?php if (Session::get('role') === '1' || Session::get('role') === '2') { ?>
-                <li class="sidebar-item">
-                    <a href="" class="sidebar-link has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#auth" aria-expanded="false" aria-controls="auth">
-                    <i class="fa-brands fa-artstation"></i>
-                        <span>QL bài viết</span>
-                    </a>
-                    <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                        <li style="padding-left: 10%;" class="sidebar-item">
+                <?php if (Session::get('role') === '1' || Session::get('role') === '2') { ?>
+                    <li class="sidebar-item">
+                        <a href="" class="sidebar-link has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#auth" aria-expanded="false" aria-controls="auth">
+                            <i class="fa-brands fa-artstation"></i>
+                            <span>QL bài viết</span>
+                        </a>
+                        <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                            <li style="padding-left: 10%;" class="sidebar-item">
 
-                            <a href="bai-viet-create.php" class="sidebar-link"> <i class="fa-solid fa-plus"></i>Tạo bài viết</a>
-                        </li>
-                        <li style="padding-left: 10%;" class="sidebar-item">
-                            <a href="bai-viet-list.php" class="sidebar-link"> <i class="fa-solid fa-bars"></i>Danh sách bài viết</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="sidebar-item">
-                    <a href="" class="sidebar-link has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#tin-tuc" aria-expanded="false" aria-controls="tin-tuc">
-                    <i class="fa-solid fa-bars"></i>
-                        <span>QL tin tức</span>
-                    </a>
-                    <ul id="tin-tuc" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                        <li style="padding-left: 10%;" class="sidebar-item">
+                                <a href="bai-viet-create.php" class="sidebar-link"> <i class="fa-solid fa-plus"></i>Tạo bài viết</a>
+                            </li>
+                            <li style="padding-left: 10%;" class="sidebar-item">
+                                <a href="bai-viet-list.php" class="sidebar-link"> <i class="fa-solid fa-bars"></i>Danh sách bài viết</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="" class="sidebar-link has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#tin-tuc" aria-expanded="false" aria-controls="tin-tuc">
+                            <i class="fa-solid fa-bars"></i>
+                            <span>QL tin tức</span>
+                        </a>
+                        <ul id="tin-tuc" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                            <li style="padding-left: 10%;" class="sidebar-item">
 
-                            <a href="tin-tuc-create.php" class="sidebar-link"> <i class="fa-solid fa-plus"></i>Tạo tin tức</a>
-                        </li>
-                        <li style="padding-left: 10%;" class="sidebar-item">
-                            <a href="tin-tuc-list.php" class="sidebar-link"> <i class="fa-solid fa-bars"></i>Danh sách tin tức</a>
-                        </li>
-                    </ul>
-                </li>
+                                <a href="tin-tuc-create.php" class="sidebar-link"> <i class="fa-solid fa-plus"></i>Tạo tin tức</a>
+                            </li>
+                            <li style="padding-left: 10%;" class="sidebar-item">
+                                <a href="tin-tuc-list.php" class="sidebar-link"> <i class="fa-solid fa-bars"></i>Danh sách tin tức</a>
+                            </li>
+                        </ul>
+                    </li>
                 <?php } ?>
         </aside>
 
@@ -143,7 +144,7 @@ header("Cache-Control: max-age=2592000");
                         </button>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Thông tin cá nhân</a></li>
-                            
+
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
