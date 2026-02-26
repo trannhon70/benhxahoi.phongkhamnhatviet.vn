@@ -70,17 +70,17 @@
                     <div class="experienced__row-left-bottom">
                         <div class="experienced__row-left-bottom-item">
                             <div>
-                                <amp-img class="experienced__row-left-bottom-item-img"
+                                <img class="experienced__row-left-bottom-item-img" loading="lazy"
                                     src="<?php echo $local ?>/images/icons/icon_check.webp" height="33px" width="40px"
-                                    alt="..."></amp-img>
+                                    alt="..."></img>
                             </div>
                             <span>Y khoa tiên tiến, dịch vụ tận tâm</span>
                         </div>
                         <div class="experienced__row-left-bottom-item">
                             <div>
-                                <amp-img class="experienced__row-left-bottom-item-img"
+                                <img class="experienced__row-left-bottom-item-img" loading="lazy"
                                     src="<?php echo $local ?>/images/icons/icon_check.webp" height="33px" width="40px"
-                                    alt="..."></amp-img>
+                                    alt="..."></img>
                             </div>
                             <span>Chuyên môn cao, tâm huyết lớn</span>
                         </div>
@@ -89,29 +89,29 @@
                     <div class="experienced__row-left-bottom">
                         <div class="experienced__row-left-bottom-item">
                             <div>
-                                <amp-img class="experienced__row-left-bottom-item-img"
+                                <img class="experienced__row-left-bottom-item-img" loading="lazy"
                                     src="<?php echo $local ?>/images/icons/icon_check.webp" height="33px" width="40px"
-                                    alt="..."></amp-img>
+                                    alt="..."></img>
                             </div>
                             <span>Nơi sức khỏe được ưu tiên</span>
                         </div>
                         <div class="experienced__row-left-bottom-item">
                             <div>
-                                <amp-img class="experienced__row-left-bottom-item-img"
+                                <img class="experienced__row-left-bottom-item-img" loading="lazy"
                                     src="<?php echo $local ?>/images/icons/icon_check.webp" height="33px" width="40px"
-                                    alt="..."></amp-img>
+                                    alt="..."></img>
                             </div>
                             <span>Sức khỏe là hạnh phúc, chúng tôi là người bảo vệ</span>
                         </div>
                     </div>
                 </div>
                 <div class="experienced__row-right">
-                    <amp-img class="experienced__row-left-bottom-item-img"
+                    <img class="experienced__row-left-bottom-item-img" loading="lazy"
                         src="<?php echo $local ?>/images/users/user-group1.webp" height="490px" width="350px" alt="...">
-                    </amp-img>
+                    </img>
                 </div>
             </div>
-            <div class="experienced__bottom">
+            <!-- <div class="experienced__bottom">
                 <div class="experienced__list">
                     <div class="experienced__list-item">
                         <img src="<?php echo $local ?>/images/users/user_1.webp" alt="..."></img>
@@ -172,7 +172,7 @@
                 <div class="experienced-item experienced-item-1 "></div>
                 <div class="experienced-item experienced-item-2"></div>
                 <div class="experienced-item experienced-item-3"></div>
-            </div>
+            </div> -->
 
         </section>
 
@@ -184,39 +184,39 @@
                 </div>
                 <div class="dominance__container-row">
                     <div class="dominance__container-row-col ">
-                        <amp-img class="dominance__container-row-col-img"
+                        <img class="dominance__container-row-col-img" loading="lazy"
                             src="<?php echo $local ?>/images/icons/icon_check1.webp" height="35px" width="35px"
-                            alt="..."></amp-img>
+                            alt="..."></img>
                         <span>Đội ngũ bác sĩ chuyên môn cao</span>
                     </div>
                     <div class="dominance__container-row-col ">
-                        <amp-img class="dominance__container-row-col-img"
+                        <img class="dominance__container-row-col-img" loading="lazy"
                             src="<?php echo $local ?>/images/icons/icon_check1.webp" height="35px" width="35px"
-                            alt="..."></amp-img>
+                            alt="..."></img>
                         <span>Môi trường thân thiện, dịch vụ tận tâm, chu đáo</span>
                     </div>
                     <div class="dominance__container-row-col ">
-                        <amp-img class="dominance__container-row-col-img"
+                        <img class="dominance__container-row-col-img" loading="lazy"
                             src="<?php echo $local ?>/images/icons/icon_check1.webp" height="35px" width="35px"
-                            alt="..."></amp-img>
+                            alt="..."></img>
                         <span>Hệ thống máy móc hiện đại</span>
                     </div>
                     <div class="dominance__container-row-col ">
-                        <amp-img class="dominance__container-row-col-img"
+                        <img class="dominance__container-row-col-img" loading="lazy"
                             src="<?php echo $local ?>/images/icons/icon_check1.webp" height="35px" width="35px"
-                            alt="..."></amp-img>
+                            alt="..."></img>
                         <span>Chi phí khám hỗ trợ điều trị bệnh hợp lý</span>
                     </div>
                     <div class="dominance__container-row-col ">
-                        <amp-img class="dominance__container-row-col-img"
+                        <img class="dominance__container-row-col-img" loading="lazy"
                             src="<?php echo $local ?>/images/icons/icon_check1.webp" height="35px" width="35px"
-                            alt="..."></amp-img>
+                            alt="..."></img>
                         <span>Thủ tục nhanh gọn, không rườm rà</span>
                     </div>
                     <div class="dominance__container-row-col ">
-                        <amp-img class="dominance__container-row-col-img"
+                        <img class="dominance__container-row-col-img"
                             src="<?php echo $local ?>/images/icons/icon_check1.webp" height="35px" width="35px"
-                            alt="..."></amp-img>
+                            alt="..."></img>
                         <span>Môi trường thân thiện</span>
                     </div>
                 </div>

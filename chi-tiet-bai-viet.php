@@ -38,9 +38,9 @@ $get_post_detail = $post->getBaiViet_bySlug($filename);
 
 
                     <div class="danhmuc__left-banner">
-                        <amp-img class="danhmuc__left-banner-img"
+                        <img loading="lazy" class="danhmuc__left-banner-img"
                             src="<?php echo $local ?>/images/banner/banner_khuyen_mai.webp" height="380px" width="250px"
-                            alt="..."></amp-img>
+                            alt="..."></img>
                     </div>
                 </div>
 
