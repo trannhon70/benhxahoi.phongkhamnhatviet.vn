@@ -39,9 +39,7 @@ $local = 'https://benhxahoi.phongkhamnhatviet.vn'
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Phòng khám Nhật Việt chuyên điều trị bệnh nam khoa, bệnh xã hội, da liễu, hậu môn - trực tràng uy tính tại thành phố Hồ Chí Minh">
-    <title>Phòng khám Nhật Việt</title>
+
     <link rel="icon" href="<?php echo $local ?>/images/icons/icon_logo.png" type="image/x-icon">
     <link rel="preload" href="<?php echo $local ?>/css/index.min.css" as="style"
         onload='this.onload=null,this.rel="stylesheet"'>
