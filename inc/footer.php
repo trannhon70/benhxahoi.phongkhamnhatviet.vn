@@ -135,8 +135,6 @@
  </div>
 
  <script language="javascript" src="https://tuvan.mayo.com.vn/JS/LsJS.aspx?siteid=KUK38256576&float=1&lng=en"></script>
-
- <script async src="<?php echo $local ?>/js/toastr.min.js"></script>
  <script async src="<?php echo $local ?>/js/random_number.min.js"></script>
 
  <script>
@@ -193,6 +191,14 @@
              updateHeaderScripts();
          });
      });
+ </script>
+ <script defer>
+     function getRandomViews() {
+         return Math.floor(Math.random() * (10000 - 2000 + 1)) + 2000;
+     }
+
+     const viewElement = document.getElementById('views');
+     viewElement.textContent = `Lượt xem: ${getRandomViews()}`;
  </script>
  </body>
 

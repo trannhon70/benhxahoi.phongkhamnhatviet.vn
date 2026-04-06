@@ -10,11 +10,11 @@ $parsed_url = parse_url($current_url);
 $path = parse_url($parsed_url['path'], PHP_URL_PATH); // Lấy phần path từ URL
 $filename = basename($path, ".html"); // Lấy tên file và loại bỏ .html
 
-$getByIdTT = null;
+$get_post_detail = null;
 if ($filename === 'tin-tuc-y-khoa') {
-    $getByIdTT = $tin_tuc->getOneLimitTinTuc();
+    $get_post_detail = $tin_tuc->getOneLimitTinTuc();
 } else {
-    $getByIdTT = $tin_tuc->getByslug_tintuc($filename);
+    $get_post_detail = $tin_tuc->getByslug_tintuc($filename);
 }
 
 ?>
@@ -37,29 +37,66 @@ if ($filename === 'tin-tuc-y-khoa') {
 
             </div>
             <div class="danhmuc__right">
+                <div>
+                    Trang chủ > Tin Tức
+                </div>
                 <?php if (Session::get('role') === '1' || Session::get('role') === '2') {
                 ?>
 
                     <a class="chinh-sua"
-                        href="<?php echo $local ?>/admin/tin-tuc-edit.php?edit=<?php echo $getByIdTT['id'] ?>"><i
+                        href="<?php echo $local ?>/admin/tin-tuc-edit.php?edit=<?php echo $get_post_detail['id'] ?>"><i
                             style="font-size:19px" class="bx bxs-pencil"></i>chỉnh sửa</a>
 
                 <?php } ?>
-                <div class="danhmuc__right-title"><?php echo $getByIdTT['tieu_de'] ?></div>
-                <div id="bg_mobile_km">
+                <div class="danhmuc__right-title"><?php echo $get_post_detail['tieu_de'] ?></div>
+                <div id="cardbs">
+                    <div
+                        style="padding: 10px; display: flex; align-items: center; justify-content: space-between; background-color: aliceblue; ">
+                        <div style="display: flex; align-items: center; gap: 2px; ">
+                            <img loading="lazy" src="<?php echo $local ?>/images/icons/icon_star.webp" alt="..."
+                                style="width: 15px; height: 15px;">
+                            <img loading="lazy" src="<?php echo $local ?>/images/icons/icon_star.webp" alt="..."
+                                style="width: 15px; height: 15px;">
+                            <img loading="lazy" src="<?php echo $local ?>/images/icons/icon_star.webp" alt="..."
+                                style="width: 15px; height: 15px;">
+                            <img loading="lazy" src="<?php echo $local ?>/images/icons/icon_star.webp" alt="..."
+                                style="width: 15px; height: 15px;">
+                            <img loading="lazy" src="<?php echo $local ?>/images/icons/icon_star.webp" alt="..."
+                                style="width: 15px; height: 15px;">
+                            <div style="color: #ff9900; font-weight: 700;">
+                                9.5/10 <span style="color: #999999; font-weight: 500;"> điểm</span>
+                            </div>
+                        </div>
+                        <div id="views" style="color: #999999; font-weight: 700;">
+                            Lượt xem: ...
+                        </div>
+                    </div>
+
+                </div>
+                <a href="javascript:void(0)" onclick="openZoosUrl('chatwin'); return false;" id="bg_mobile_km">
                     <img width="100%" height="auto" src="<?php echo $local ?>/images/logo_mobile/bg_mobile_km.gif"
                         alt="...">
-                </div>
+                </a>
                 <hr>
                 <div class="danhmuc__right-content" id="bai-viet">
-                    <?php echo htmlspecialchars_decode($getByIdTT['content']); ?> </div>
+                    <!-- <?php echo htmlspecialchars_decode($get_post_detail['content']); ?>  -->
+                </div>
 
             </div>
         </div>
+        <div class="post_connection">
+            <div class="post_connection_title">Danh sách bài viết liên quan :</div>
+            <a class="post_connection_item" href="noi-mun-o-hang-nguyen-nhan-va-phuong-phap-ho-tro-dieu-tri-16.html"><span>1. </span>Nổi mụn ở háng – Nguyên nhân và phương pháp hỗ trợ điều trị</a>
+            <a class="post_connection_item" href="tong-hop-benh-truyen-nhiem-qua-duong-quan-he-tinh-duc-15.html"><span>2. </span>Tổng hợp bệnh truyền nhiễm qua đường quan hệ tình dục</a>
+            <a class="post_connection_item" href="tu-van-truc-tuyen-benh-xa-hoi-online-mien-phi-247-14.html"><span>3. </span>Tư vấn trực tuyến bệnh xã hội online MIỄN PHÍ 24/7</a>
+            <a class="post_connection_item" href="cac-benh-truyen-nhiem-qua-duong-quan-he-bang-mieng-13.html"><span>4. </span>Các bệnh truyền nhiễm qua đường quan hệ bằng miệng</a>
+            <a class="post_connection_item" href="lam-xet-nghiem-benh-xa-hoi-o-dau-chinh-xac-nhanh-chong-12.html"><span>5. </span>Làm xét nghiệm bệnh xã hội ở đâu chính xác nhanh chóng</a>
+        </div>
+        <?php include_once "layout/feedback_component.php" ?>
     </main>
 
     <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
+        function applyCSSandJS() {
             //images gây shock
             const shockElements = document.querySelectorAll('.shock_img');
             shockElements.forEach(shockElement => {
@@ -144,7 +181,8 @@ if ($filename === 'tin-tuc-y-khoa') {
                     //hiển thị css img chatbox
                     if (imgElements[i].src.startsWith(
                             '<?php echo $local ?>/ckfinder/userfiles/images/Chat/Chat-Dakhoa.gif') ==
-                        // if (imgElements[i].src.startsWith('http://localhost/ckfinder/userfiles/images/Chat/Chat-Dakhoa.gif') ==
+                        // if (imgElements[i].src.startsWith(
+                        //         'http://localhost/ckfinder/userfiles/images/Chat/Chat-Dakhoa.gif') ==
                         true) {
                         imgElements[i].style.borderRadius = '8px';
                         imgElements[i].style.setProperty('display', 'block', 'important');
@@ -202,7 +240,42 @@ if ($filename === 'tin-tuc-y-khoa') {
             } else {
                 console.warn("One or more elements were not found in the DOM.");
             }
-        })
+        }
+    </script>
+    <script>
+        const bodyPlaceholder = document.getElementById("bai-viet");
+
+        const loadBody = () => {
+            let content = `<?php echo htmlspecialchars_decode($get_post_detail['content']); ?>`;
+            // Gán tạm nội dung vào DOM ẩn để xử lý
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = content;
+
+            // Duyệt tất cả text node
+            const walker = document.createTreeWalker(tempDiv, NodeFilter.SHOW_TEXT, null, false);
+            while (walker.nextNode()) {
+                const node = walker.currentNode;
+                // Thay số điện thoại
+                node.nodeValue = node.nodeValue.replace(/\(028\)\s*7776\s*7777/g, '0901 869 945');
+            }
+
+            // Gán ra DOM chính
+            bodyPlaceholder.innerHTML = tempDiv.innerHTML;
+            bodyPlaceholder.classList.add("loaded");
+        };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    loadBody();
+                    applyCSSandJS();
+                    checkImgMobile()
+                }
+            });
+        });
+
+        // Khởi tạo tải content ban đầu và bắt đầu quan sát bodyPlaceholder
+
+        observer.observe(bodyPlaceholder);
     </script>
 
     <?php include 'inc/footer.php' ?>
